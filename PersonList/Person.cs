@@ -7,7 +7,13 @@ namespace PersonList
         private string firstName;
         private string lastName;
         private int personAge;
-
+        // parameter constructor
+        public Person(string f, string l, int a)
+        {
+            FirstName = f;
+            LastName = l;
+            PersonAge = a;
+        }
         public string FirstName 
         { 
             get { return firstName; }
@@ -26,9 +32,18 @@ namespace PersonList
             set { personAge = value; }
         }
 
-        public bool StringValid(string value)
+        static public bool IsValid(string[] value)
         {
-            if (value != "")
+            bool flag = true;
+            if (value[0] == "" || value[1] == "")
+            {
+                flag = false;
+            }
+            
+            int number;
+            bool succsess = Int32.TryParse(value[2], out number);
+
+            if (succsess == true && flag == true)
             {
                 return true;
             }
@@ -36,13 +51,6 @@ namespace PersonList
             {
                 return false;
             }
-        }
-
-        public bool IntValid(string value)
-        {
-            int number;
-            bool succsess = Int32.TryParse(value, out number);
-            return succsess;
         }
     }
 }
