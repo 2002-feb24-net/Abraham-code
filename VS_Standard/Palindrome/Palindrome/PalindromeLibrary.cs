@@ -19,5 +19,13 @@ namespace Palindrome
             }
             return true;
         }
+
+        public bool emptyNull(string s)
+        {
+            if (String.IsNullOrWhiteSpace(s))
+                return false;
+
+            return true;
+        }
     }
 }
