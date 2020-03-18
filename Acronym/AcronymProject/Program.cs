@@ -7,8 +7,8 @@ namespace AcronymProject
         static void Main(string[] args)
         {
             System.Console.WriteLine("Please enter a series of words to create an acronym: ");
-            string acronym = CreateAcronym(Console.ReadLine());
-            Console.WriteLine("Your acronym: " + acronym.ToUpper());
+            string acronym = CreateAcronym(Console.ReadLine();
+            Console.WriteLine("Your acronym: " + acronym.ToUpper())
         }
 
         static string CreateAcronym(string acr)
